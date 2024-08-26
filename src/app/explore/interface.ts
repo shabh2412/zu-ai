@@ -5,3 +5,31 @@ export interface FileState {
   subject: string | null;
   title: string;
 }
+
+export interface Criteria {
+  title: string;
+  summary: string;
+  rating: number; // scale of 1-10
+  strengths: string[];
+  scopeOfImprovement: string[];
+}
+
+export interface ResultInterface {
+  overallScore: number;
+  overallRemark: "Good" | "Average" | "Bad";
+  evaluationDate: Date;
+  criteria: Criteria[];
+}
+
+export interface CourseWork {
+  id: string;
+  title: string;
+  subject: string;
+  courseworkType: string;
+  fileUrl: string;
+  file: File;
+  duration: number;
+  words: number;
+  language: "English" | "German" | "French" | "Spanish" | "Portuguese" | "Italian" | "Japanese" | "Chinese";
+  result: ResultInterface;
+}
