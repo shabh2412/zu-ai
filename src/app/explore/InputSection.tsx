@@ -7,6 +7,9 @@ import { FileState } from "./interface";
 import Dropdown from "./Dropdown";
 import { Input } from "@/components/ui/input";
 import { MagicWandIcon } from "@radix-ui/react-icons";
+import { saveFileToLocalStorage } from "./utils";
+import { evaluate } from "./actions";
+import { Loader2Icon } from "lucide-react";
 
 function InputSection() {
   const [file, setFile] = useState<FileState>({
@@ -58,6 +61,20 @@ function InputSection() {
     }
   }, [file]);
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    try {
+      setIsLoading(true);
+      // save file to local storage
+      await evaluate(file);
+    } catch (error) {
+      console.error("Error saving file to localStorage:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="border border-muted rounded-3xl p-3 bg-[#f7f6fa] flex flex-col gap-6">
       <FileUpload setFile={setFile} file={file} />
@@ -95,7 +112,12 @@ function InputSection() {
         </div>
       </div>
       <div className="w-full">
-        <Button className="w-full tracking-wide" disabled={!enableEvaluate}>
+        <Button
+          className="w-full tracking-wide"
+          disabled={!enableEvaluate || isLoading}
+          onClick={handleSubmit}
+        >
+          {isLoading && <Loader2Icon className="mr-2 h-6 w-6 animate-spin" />}
           <MagicWandIcon className="mr-2 h-6 w-6" />
           Evaluate your Score
         </Button>
