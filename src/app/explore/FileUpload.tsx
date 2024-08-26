@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { saveFileToLocalStorage, validateFile } from "@/utils/fileUtils";
+import { saveFileToLocalStorage, validateFile } from "@/app/explore/utils/";
 import { CheckCircledIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { FileState } from "./interface";
 
