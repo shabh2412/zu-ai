@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import GreetingMessage from "./GreetingMessage";
 import InputSection from "./InputSection";
 
@@ -9,7 +10,9 @@ function Explore() {
   return (
     <main className="pt-8 flex flex-col gap-4">
       <GreetingMessage primary={primaryMessage} secondary={secondaryMessage} />
-      <InputSection />
+      <Suspense>
+        <InputSection />
+      </Suspense>
     </main>
   );
 }
