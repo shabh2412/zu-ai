@@ -12,15 +12,17 @@ const PdfViewer: React.FC<PdfViewerProps> = ({ base64File, fileName }) => {
       <div className="w-full rounded-t-3xl p-3 flex justify-between gap-2 bg-[#FFFFFF7A]">
         <FileNameChip title={fileName} />
       </div>
-      <iframe
-        title={fileName || "PDF Viewer"}
-        src={`${base64File}#zoom=40`}
-        style={{
-          width: "100%",
-          height: "70vh", // Full viewport height
-          border: "none",
-        }}
-      />
+      <div className="bg-white">
+        <iframe
+          title={fileName || "PDF Viewer"}
+          src={`${base64File}#zoom=40`}
+          style={{
+            width: "100%",
+            height: "70vh", // Full viewport height
+            border: "none",
+          }}
+        />
+      </div>
     </div>
   );
 };
