@@ -127,9 +127,9 @@ function InputSection() {
           />
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full flex">
         <Button
-          className="w-full tracking-wide"
+          className="w-full tracking-wide max-w-[245px] mx-auto lg:mx-0"
           disabled={!enableEvaluate || isLoading}
           onClick={handleSubmit}
         >
