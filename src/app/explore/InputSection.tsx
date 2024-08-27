@@ -7,7 +7,6 @@ import { FileState } from "./interface";
 import Dropdown from "./Dropdown";
 import { Input } from "@/components/ui/input";
 import { MagicWandIcon } from "@radix-ui/react-icons";
-import { saveFileToLocalStorage } from "./utils";
 import { evaluate } from "./actions";
 import { Loader2Icon } from "lucide-react";
 
