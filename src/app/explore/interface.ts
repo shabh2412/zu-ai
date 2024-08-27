@@ -22,14 +22,21 @@ export interface ResultInterface {
 }
 
 export interface CourseWork {
+  author: string;
   id: string;
   title: string;
   subject: string;
   courseworkType: string;
   fileUrl: string;
   file: File;
+  fileName: string;
   duration: number;
   words: number;
   language: "English" | "German" | "French" | "Spanish" | "Portuguese" | "Italian" | "Japanese" | "Chinese";
   result: ResultInterface;
+  date?: Date;
+}
+
+export interface CourseWorkWithFile extends CourseWork {
+  base64File: string;
 }
