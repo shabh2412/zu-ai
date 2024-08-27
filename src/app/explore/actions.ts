@@ -18,7 +18,7 @@ export async function evaluate(file: FileState) {
       throw new Error("Something went wrong");
     }
     // save the file to localStorage
-    const result = await response.json();
+    const result = await response.json() as CourseWork;
     saveFileToLocalStorage({ ...result, file: file.file as File });
     // create a promise and save the file after 2 seconds
     // const promise = new Promise((resolve, reject) => {
