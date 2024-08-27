@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import GreetingMessage from "./GreetingMessage";
 import InputSection from "./InputSection";
+import Image from "next/image";
 
 function Explore() {
   const primaryMessage =
@@ -9,7 +10,7 @@ function Explore() {
 
   return (
     <main className="flex gap-4 justify-center w-full">
-      <div className="pt-8 flex flex-col gap-4 md:mx-auto md:max-w-[500px] lg:mx-0">
+      <div className="flex flex-col gap-4 md:mx-auto md:max-w-[500px] lg:mx-0">
         <GreetingMessage
           primary={primaryMessage}
           secondary={secondaryMessage}
@@ -20,10 +21,12 @@ function Explore() {
       </div>
       {/* input screen asset comes here */}
       <div className="w-fit hidden lg:block h-full self-end">
-        <img
+        <Image
           src="/input_screen_asset.svg"
           alt="explore"
           className="object-cover"
+          width={290}
+          height={528}
         />
       </div>
     </main>
