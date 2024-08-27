@@ -79,18 +79,6 @@ export default function CriteriaCard({
               />
             }
           />
-          <div className="w-full flex flex-col gap-2">
-            <p className="text-black text-xl font-semibold">
-              Scope of Improvement
-            </p>
-            <div className="w-full rounded-3xl p-4">
-              {criteria.scopeOfImprovement.map((scope, index) => (
-                <p key={index} className="text-text-prim">
-                  {scope}
-                </p>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
