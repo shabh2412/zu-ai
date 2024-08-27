@@ -1,11 +1,11 @@
 import { CourseWorkWithFile } from "@/app/explore/interface";
-import jsonData from "@/stores/data/index.json";
+import { stringified_data } from "@/stores/data";
 
 export const getSavedFiles = (): CourseWorkWithFile[] => {
   try {
     const savedFiles = localStorage.getItem("savedFiles");
     if (!savedFiles) {
-      const data = jsonData as CourseWorkWithFile[];
+      const data = JSON.parse(stringified_data) as CourseWorkWithFile[];
       localStorage.setItem("savedFiles", JSON.stringify(data));
       return data;
     }
