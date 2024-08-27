@@ -42,6 +42,10 @@ body,
     --text-prim: #5b6170;
     --muted-placeholder: 209 20% 80%;
     --disabled: 216 21% 73%;
+    --text-dark: 227 10% 27%;
+    --success: 155 53% 50%;
+    --danger: 25 84% 52%;
+    --warning: 43 93% 64%;
   }
 
   .dark {
