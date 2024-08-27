@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { CourseworkStoreProvider } from "@/providers/coursework-store-provider";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body className={inter.className}>
-        {/* sidebar - navbar - with hamburger in small screen */}
-        {/* contents in the below div */}
-        <div className="px-3">{children}</div>
+        <CourseworkStoreProvider>
+          {/* sidebar - navbar - with hamburger in small screen */}
+          {/* contents in the below div */}
+          <div className="px-3">{children}</div>
+        </CourseworkStoreProvider>
       </body>
     </html>
   );
