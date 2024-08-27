@@ -65,7 +65,6 @@ function InputSection() {
 
   useEffect(() => {
     if (file?.file && file?.subject && file?.courseworkType && file?.title) {
-      console.log(file);
       setEnableEvaluate(true);
     } else {
       setEnableEvaluate(false);
