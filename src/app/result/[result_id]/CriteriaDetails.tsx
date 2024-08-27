@@ -26,11 +26,14 @@ export default function CriteriaDetails({
       >
         {list.map((listItem, index) => (
           <div
-            className="flex gap-3 justify-start"
+            className="grid grid-cols-8 gap-3 justify-start"
             key={`list-${index}-${title}-${listItem}`}
           >
-            {ListItemIcon}
-            <p key={index} className="text-text-prim text-sm font-medium">
+            <div>{ListItemIcon}</div>
+            <p
+              key={index}
+              className="text-text-prim text-sm font-medium col-span-7"
+            >
               {listItem}
             </p>
           </div>
