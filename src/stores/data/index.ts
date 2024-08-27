@@ -1,6 +1,6 @@
 const data = [
     {
-        "author": "John Doe",
+        "author": "Tony Stark",
         "id": "62691a5c-b094-4ac9-85ec-14e9999dea1b",
         "title": "How does the temperature of a Copper pipe affect the time it",
         "subject": "Chemistry",
@@ -74,14 +74,14 @@ const data = [
         "words": 9573,
         "language": "English",
         "result": {
-            "overallScore": 6,
+            "overallScore": 7,
             "overallRemark": "Average",
             "evaluationDate": "2024-08-27T20:49:07.894Z",
             "criteria": [
                 {
                     "title": "Content Understanding",
                     "summary": "Evaluates the depth of understanding and knowledge demonstrated in the coursework.",
-                    "rating": 5,
+                    "rating": 7,
                     "strengths": [
                         "Basic understanding of the subject is evident.",
                         "Some relevant research is included."
@@ -95,7 +95,7 @@ const data = [
                 {
                     "title": "Argument and Structure",
                     "summary": "Evaluates the logical flow, coherence, and structure of the argument or narrative.",
-                    "rating": 3,
+                    "rating": 4,
                     "strengths": [
                         "Excellent grasp of the subject matter.",
                         "Thorough research and analysis.",
@@ -138,14 +138,14 @@ const data = [
         "words": 9573,
         "language": "English",
         "result": {
-            "overallScore": 6,
+            "overallScore": 8,
             "overallRemark": "Average",
             "evaluationDate": "2024-08-27T20:49:07.894Z",
             "criteria": [
                 {
                     "title": "Content Understanding",
                     "summary": "Evaluates the depth of understanding and knowledge demonstrated in the coursework.",
-                    "rating": 5,
+                    "rating": 7,
                     "strengths": [
                         "Basic understanding of the subject is evident.",
                         "Some relevant research is included."
@@ -159,7 +159,7 @@ const data = [
                 {
                     "title": "Argument and Structure",
                     "summary": "Evaluates the logical flow, coherence, and structure of the argument or narrative.",
-                    "rating": 3,
+                    "rating": 7,
                     "strengths": [
                         "Excellent grasp of the subject matter.",
                         "Thorough research and analysis.",
