@@ -60,9 +60,19 @@ const config = {
         },
         text: {
           prim: "var(--text-prim)",
+          dark: "hsl(var(--text-dark))"
         },
         disabled: {
           DEFAULT: "hsl(var(--disabled))",
+        },
+        suceess: {
+          DEFAULT: "hsl(var(--success))",
+        },
+        danger: {
+          DEFAULT: "hsl(var(--danger))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
         }
       },
       borderRadius: {
