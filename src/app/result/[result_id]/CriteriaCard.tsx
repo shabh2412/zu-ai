@@ -46,7 +46,7 @@ export default function CriteriaCard({
       <div
         className={cn(
           "w-full overflow-hidden transition-all duration-500 ease-in-out flex flex-col gap-4",
-          showDetails ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          showDetails ? "opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <hr className="border-1 border-gray-300 my-2" />
