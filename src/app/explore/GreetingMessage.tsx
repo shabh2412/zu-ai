@@ -7,7 +7,7 @@ interface GreetingMessageProps {
 
 function GreetingMessage({ primary, secondary }: GreetingMessageProps) {
   return (
-    <h1 className="text-2xl font-bold tracking-wide">
+    <h1 className="text-2xl font-bold tracking-wide md:tracking-tight">
       {primary}
       <span className="text-tertiary"> {secondary}</span>
     </h1>
