@@ -10,6 +10,7 @@ export async function POST(request: Request) {
     const subject = formData.get("subject") as string;
     const title = formData.get("title") as string;
     const fileUrl = formData.get("fileUrl") as string;
+    const author = formData.get("author") as string;
 
     if (!file || !courseworkType || !subject || !title) {
       return new Response(
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
 
     // Construct the CourseWork response
     const courseWorkResponse: CourseWork = {
+      author,
       id,
       title,
       subject,
@@ -48,6 +50,8 @@ export async function POST(request: Request) {
       words,
       language: "English", // Assuming English; adjust based on actual data
       result: evaluationResult,
+      date: new Date(),
+      fileName: file?.name,
     };
 
     return new Response(JSON.stringify(courseWorkResponse), {
