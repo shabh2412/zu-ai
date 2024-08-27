@@ -78,7 +78,12 @@ function InputSection() {
     try {
       setIsLoading(true);
       // save file to local storage
-      await evaluate(file);
+      const result = await evaluate(file, addCoursework);
+      // extract the id from the result and navigate to the result page with the id result/{result_id}
+      const resultId = result.id;
+      // redirect to the result page with the id
+      const url = `/result/${resultId}`;
+      router.push(url);
     } catch (error) {
       console.error("Error saving file to localStorage:", error);
     } finally {
