@@ -46,6 +46,7 @@ body,
     --success: 155 53% 50%;
     --danger: 25 84% 52%;
     --warning: 43 93% 64%;
+    --text-semi-dark: #98a1bb;
   }
 
   .dark {

@@ -60,7 +60,8 @@ const config = {
         },
         text: {
           prim: "var(--text-prim)",
-          dark: "hsl(var(--text-dark))"
+          dark: "hsl(var(--text-dark))",
+          semiDark: "var(--text-semi-dark)",
         },
         disabled: {
           DEFAULT: "hsl(var(--disabled))",
