@@ -85,7 +85,7 @@ function FileUpload({ file, setFile }: FileUploadProps) {
           >
             {file?.fileUrl && (
               <Cross2Icon
-                className="absolute -top-1.5 -right-1 text-xs border border-border rounded-full bg-white text-[#5B6170] h-4 w-4 cursor-pointer hover:transform hover:scale-150 hover:bg-red-200 transition-all duration-200"
+                className="absolute -top-1.5 -right-1 text-xs border border-border rounded-full bg-white text-text-prim h-4 w-4 cursor-pointer hover:transform hover:scale-150 hover:bg-red-200 transition-all duration-200"
                 onClick={handleClearFile}
               />
             )}
