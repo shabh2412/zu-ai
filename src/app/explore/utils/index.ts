@@ -109,7 +109,7 @@ export const evaluateCoursework = (file: File): ResultInterface => {
     },
   ];
 
-  const overallScore = criteria.reduce((acc, crit) => acc + crit.rating, 0) / criteria.length;
+  const overallScore = Math.floor(criteria.reduce((acc, crit) => acc + crit.rating, 0) / criteria.length);
   const overallRemark = overallScore >= 8 ? "Good" : overallScore >= 5 ? "Average" : "Bad";
 
   return {
