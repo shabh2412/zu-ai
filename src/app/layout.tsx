@@ -21,7 +21,7 @@ export default function RootLayout({
         <CourseworkStoreProvider>
           {/* sidebar - navbar - with hamburger in small screen */}
           {/* contents in the below div */}
-          <div className="px-3">{children}</div>
+          <div className="px-3 pt-10">{children}</div>
         </CourseworkStoreProvider>
       </body>
     </html>
