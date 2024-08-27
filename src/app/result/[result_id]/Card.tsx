@@ -1,9 +1,11 @@
 "use client";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
-const Card = forwardRef<HTMLDivElement, CardProps>(({ ...props }, ref) => {
+
+export default forwardRef(function Card(
+  props: CardProps,
+  ref: React.Ref<HTMLDivElement>
+) {
   return <div className="w-full bg-white rounded-3xl" {...props} ref={ref} />;
 });
-
-export default Card;
