@@ -103,7 +103,10 @@ function FileUpload({ file, setFile }: FileUploadProps) {
             {file?.fileUrl && (
               <div className="flex gap-1 items-center">
                 <CheckCircledIcon className="bg-green-500 rounded-full text-white font-bold border-none text-lg" />
-                <p className="text-lg font-medium">{file?.file?.name}</p>
+                {/* truncate file name */}
+                <p className="text-lg font-medium truncate w-32">
+                  {file?.file?.name}
+                </p>
               </div>
             )}
           </div>
