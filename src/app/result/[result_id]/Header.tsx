@@ -2,6 +2,7 @@ import { CourseWorkWithFile } from "@/app/explore/interface";
 import { cn } from "@/lib/utils";
 import Card from "./Card";
 import { useMemo } from "react";
+import ScoreProgress from "./ScoreProgress";
 
 export default function Header({
   currentFile,
@@ -49,44 +50,10 @@ export default function Header({
             <p className="font-light text-xs">Evaluated on {formattedDate}</p>
           </div>
           {/* Overall score / 20 (max score) - circular progress */}
-          <div className="relative w-16 h-16 flex items-center justify-center">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg className="w-full h-full">
-                <circle
-                  className="text-gray-300"
-                  strokeWidth="4"
-                  stroke="currentColor"
-                  fill="transparent"
-                  r="28"
-                  cx="32"
-                  cy="32"
-                />
-                <circle
-                  className={cn(
-                    currentFile?.result.overallRemark === "Bad"
-                      ? "text-danger"
-                      : currentFile?.result.overallRemark === "Average"
-                      ? "text-warning"
-                      : "text-success"
-                  )}
-                  strokeWidth="4"
-                  strokeDasharray="176"
-                  strokeDashoffset={
-                    176 - (176 * (currentFile?.result.overallScore || 0)) / 20
-                  }
-                  strokeLinecap="round"
-                  stroke="currentColor"
-                  fill="transparent"
-                  r="28"
-                  cx="32"
-                  cy="32"
-                />
-              </svg>
-            </div>
-            <p className="absolute text-lg font-semibold text-text-dark">
-              {currentFile?.result.overallScore}/20
-            </p>
-          </div>
+          <ScoreProgress
+            maxScore={20}
+            score={currentFile?.result.overallScore || 0}
+          />
         </div>
       </Card>
     </div>
