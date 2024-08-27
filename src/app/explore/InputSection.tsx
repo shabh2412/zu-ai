@@ -17,6 +17,7 @@ function InputSection() {
 
   useEffect(() => {
     initializeCourseworks(getSavedFiles());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const router = useRouter();
   const searchParams = useSearchParams();
