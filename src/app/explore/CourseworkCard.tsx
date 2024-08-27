@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import Chip from "./Chip";
 import { CourseWorkWithFile } from "./interface";
+import Image from "next/image";
 
 export function CourseworkCard({
   title,
@@ -19,9 +20,19 @@ export function CourseworkCard({
 
   return (
     <div
-      className="w-full rounded-xl border p-3 flex flex-col gap-2 border-[#D8E3F4] bg-gradient-to-br from-white to-[#D8E3F452] h-[186px] md:h-full cursor-pointer hover:to-white"
+      className="w-full rounded-xl border p-3 flex items-center justify-start gap-2 border-[#D8E3F4] bg-gradient-to-br from-white to-[#D8E3F452] h-[186px] md:h-full cursor-pointer hover:to-white"
       onClick={handleNavigate}
     >
+      <div className="h-full invisible lg:visible w-0 lg:w-[120px] flex items-center">
+        <Image
+          src="/coursework_thumbnail.svg"
+          alt="coursework thumbnail"
+          width={120}
+          height={160}
+          objectFit="cover"
+        />
+      </div>
+
       <div className="w-full gap-2 flex flex-col">
         <div className="w-full flex flex-col gap-4">
           <p className="font-semibold line-clamp-2">{title}</p>
