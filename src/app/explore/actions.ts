@@ -31,5 +31,6 @@ export async function evaluate(file: FileState) {
     // await promise;
   } catch (error) {
     console.error("Yo! Error saving file to localStorage:", error);
+    throw error;
   }
 }
