@@ -8,8 +8,21 @@ import { Input } from "@/components/ui/input";
 import { MagicWandIcon } from "@radix-ui/react-icons";
 import { evaluate } from "./actions";
 import { Loader2Icon } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCourseworkStore } from "@/providers/coursework-store-provider";
+import { getSavedFiles } from "../result/utils";
 
 function InputSection() {
+  const { initializeCourseworks } = useCourseworkStore((state) => state);
+
+  useEffect(() => {
+    initializeCourseworks(getSavedFiles());
+  }, []);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const { addCoursework } = useCourseworkStore((state) => state);
+
   const [file, setFile] = useState<FileState>({
     fileUrl: null,
     file: null,
