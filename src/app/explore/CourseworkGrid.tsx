@@ -97,10 +97,12 @@ export default function MyCourseworkGrid({
                 <CourseworkCard key={coursework.id} {...coursework} />
               ))
           ) : (
-            <p>No coursework found</p>
+            <p className="text-base text-text-semiDark font-medium h-full w-full border border-dashed border-primary rounded col-span-2 flex justify-center items-center">
+              No coursework found
+            </p>
           )}
         </div>
-        {courseworks.length > (slice || 2) && (
+        {courseworkCards.length > (slice || 2) && (
           <div className="w-full flex justify-center items-center">
             <p
               className="text-base text-text-semiDark font-medium hover:underline cursor-pointer py-1 px-[6px]"
